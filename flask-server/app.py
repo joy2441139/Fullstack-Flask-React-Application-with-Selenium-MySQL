@@ -1,3 +1,4 @@
+from flask import Flask, jsonify
 import mysql.connector
 import selenium_getData as sg
 
@@ -25,8 +26,6 @@ def db():
             for i in mycursor:
                 dbresult.append(i)
 
-            mycursor.close()
-            mydb.close()
         else:
             # get table data using selenium
             data = sg.webDriver()
@@ -52,13 +51,30 @@ def db():
             for i in mycursor:
                 dbresult.append(i)
 
-            mycursor.close()
-            mydb.close()
+        # close connection of mycursor & mydb
+        mycursor.close()
+        mydb.close()
 
+        # return data from DB
         return dbresult
 
     else:
         return "Connection Error"
 
 
-print(db())
+app = Flask(__name__)
+
+
+@app.route('/')
+def index():
+    return "Welcome to My API"
+
+
+@app.route('/data', methods=['GET'])
+def get():
+    dbresult = db()
+    return jsonify({'DBResult': dbresult})
+
+
+if __name__ == "__main__":
+    app.run(debug=True)
