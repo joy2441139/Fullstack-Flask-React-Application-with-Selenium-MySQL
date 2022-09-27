@@ -27,6 +27,4 @@ def webDriver():
         result.append(temp_data)
     driver.close()
 
-    print(result)
-
     return result
