@@ -30,6 +30,3 @@ def webDriver():
     print(result)
 
     return result
-
-
-print(webDriver())
