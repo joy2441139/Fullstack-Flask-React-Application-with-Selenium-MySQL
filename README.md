@@ -20,31 +20,73 @@ This is a full-stack application that will extract data from a provided source, 
 
 ## Project Setup
 
-### Database Setup:
+### Database and git setup:
 
-#### Create a database where =>
+Create a database
 
-- host = 'localhost'
-- username = 'root'
-- password = 'root'
-- database = 'seleniumdb'
+```
+ host = 'localhost'
+ username = 'root'
+ password = 'root'
+ database = 'seleniumdb'
+```
 
-### Setting up the project:
+Create a clone of the project
 
+```sh
+git clone https://github.com/joy2441139/Fullstack-Flask-React-Application-with-Selenium-MySQL.git
+```
+
+```sh
+cd Fullstack-Flask-React-Application-with-Selenium-MySQL
+```
+
+### Install all dependencies for Windows (Backend):
+
+Open a terminal for backend and run below commands
+
+```sh
+cd flask-server
+```
+
+Install selenium using pip command
+
+```sh
 pip install selenium
+```
 
+Install webdriver-manager using pip command
+
+```sh
 pip install webdriver-manager
+```
 
-## mysql-connector
+Install mysql-connector using pip command
 
+```sh
 pip install mysql-connector
+```
 
-create database = "seleniumdb"
+Install Flask using pip command
 
-host:localhost username:root password:root
-
-## Flask
-
+```sh
 pip install Flask
+```
+
+### Install all dependencies for Windows (Frontend):
+
+Open another terminal for frontend and run below commands
+
+```sh
+cd client
+```
+
+Install all npm packages
+
+```sh
+npm install
+```
 
 flask run
+
+npm start
