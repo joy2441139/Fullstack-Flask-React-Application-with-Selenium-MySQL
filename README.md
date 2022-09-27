@@ -87,6 +87,40 @@ Install all npm packages
 npm install
 ```
 
-flask run
+## Run the Project
 
+### Run backend:
+
+In the terminal used for backend before run below commands
+
+if not currently flask-server directory
+
+```sh
+cd flask-server
+```
+
+then
+
+```sh
+flask run
+```
+
+### Run Frontend:
+
+In the terminal used for frontend before run below commands
+
+if not currently client directory
+
+```sh
+cd client
+```
+
+then
+
+```sh
 npm start
+```
+
+## Output:
+
+After running both backend and frontend a webpage will pop up in the browser in this [http://localhost:3000](http://localhost:3000) link then wait for a while to fetch all data from backend upon application load. Finally it will display a table of required data on the webpage.
