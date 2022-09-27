@@ -7,7 +7,6 @@ function App() {
   const [data, setData] = useState([{}])
 
   useEffect(() => {
-    console.log("i fire once");
     fetch("/data").then(
       res => res.json()
     ).then(
